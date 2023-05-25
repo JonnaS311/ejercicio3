@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>CalculadoraProyect</title>
+</head>
+<body>
+    
+<div class="w-screen h-screen flex justify-center items-center bg-cover bg-center" style="background-image: url('./paisaje-de-montanas-en-el-bosque-diseno-minimalista_2560x1440_xtrafondos.com\ \(1\).jpg')">
+  <div class="flex flex-col rounded-lg overflow-hidden bg-black bg-opacity-50 backdrop-filter backdrop-blur-xl">
+    <div class="flex items-center space-x-1 p-3">
+      <div class="w-3 h-3 rounded-full bg-red-500"></div>
+      <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+      <div class="w-3 h-3 rounded-full bg-green-500"></div>
+      <span class="text-white">by: Jonnathan Sotelo</span>
+    </div>
+    <input type="text" value="0" id="text" class="text-right text-5xl w-72 bg-transparent text-white px-4 font-light" />
+    <div class="grid grid-cols-4">
+      <button class="py-5 bg-purple-400 bg-opacity-10 text-white font-bold text-xl focus:outline-none hover:bg-opacity-25 transition-all duration-200" id="ac" onclick="reiniciar()">AC</button>
+      <button class="py-5 bg-purple-400 bg-opacity-10 text-white font-bold text-xl focus:outline-none hover:bg-opacity-25 transition-all duration-200" id="mm" onclick="agregar_value('\(')">(</button>
+      <button class="py-5 bg-purple-400 bg-opacity-10 text-white font-bold text-xl focus:outline-none hover:bg-opacity-25 transition-all duration-200" id="percent" onclick="agregar_value('\)')">)</button>
+      <button class="py-5 bg-purple-400 bg-opacity-10 text-white font-bold text-xl focus:outline-none hover:bg-opacity-25 transition-all duration-200" id="div" onclick="agregar_value('/')">/</button>
+
+      <button class="py-5 bg-purple-400 bg-opacity-10 text-white font-bold text-xl focus:outline-none hover:bg-opacity-25 transition-all duration-200" id="siete" onclick="agregar_value('7')">7</button>
+      <button class="py-5 bg-purple-400 bg-opacity-10 text-white font-bold text-xl focus:outline-none hover:bg-opacity-25 transition-all duration-200" id="ocho" onclick="agregar_value('8')">8</button>
+      <button class="py-5 bg-purple-400 bg-opacity-10 text-white font-bold text-xl focus:outline-none hover:bg-opacity-25 transition-all duration-200" id="nueve" onclick="agregar_value('9')">9</button>
+      <button class="py-5 bg-purple-400 bg-opacity-10 text-white font-bold text-xl focus:outline-none hover:bg-opacity-25 transition-all duration-200" id="por" onclick="agregar_value('*')">*</button>
+
+      <button class="py-5 bg-purple-400 bg-opacity-10 text-white font-bold text-xl focus:outline-none hover:bg-opacity-25 transition-all duration-200" id="cuatro" onclick="agregar_value('4')">4</button>
+      <button class="py-5 bg-purple-400 bg-opacity-10 text-white font-bold text-xl focus:outline-none hover:bg-opacity-25 transition-all duration-200" id="cinco" onclick="agregar_value('5')">5</button>
+      <button class="py-5 bg-purple-400 bg-opacity-10 text-white font-bold text-xl focus:outline-none hover:bg-opacity-25 transition-all duration-200" id="seis" onclick="agregar_value('6')">6</button>
+      <button class="py-5 bg-purple-400 bg-opacity-10 text-white font-bold text-xl focus:outline-none hover:bg-opacity-25 transition-all duration-200" id="menos" onclick="agregar_value('-')">-</button>
+
+      <button class="py-5 bg-purple-400 bg-opacity-10 text-white font-bold text-xl focus:outline-none hover:bg-opacity-25 transition-all duration-200" id="uno" onclick="agregar_value('1')">1</button>
+      <button class="py-5 bg-purple-400 bg-opacity-10 text-white font-bold text-xl focus:outline-none hover:bg-opacity-25 transition-all duration-200" id="dos" onclick="agregar_value('2')">2</button>
+      <button class="py-5 bg-purple-400 bg-opacity-10 text-white font-bold text-xl focus:outline-none hover:bg-opacity-25 transition-all duration-200" id="tres" onclick="agregar_value('3')">3</button>
+      <button class="py-5 bg-purple-400 bg-opacity-10 text-white font-bold text-xl focus:outline-none hover:bg-opacity-25 transition-all duration-200" id="mas" onclick="agregar_value('+')">+</button>
+
+      <button class="py-5 bg-purple-400 bg-opacity-10 text-white font-bold text-xl focus:outline-none hover:bg-opacity-25 transition-all duration-200" id="cero" onclick="agregar_value('0')">0</button>
+      <button class="py-5 bg-purple-400 bg-opacity-10 text-white font-bold text-xl focus:outline-none hover:bg-opacity-25 transition-all duration-200" id="cero" onclick="eliminar_uno()">ac</button>
+      <button class="py-5 bg-purple-400 bg-opacity-10 text-white font-bold text-xl focus:outline-none hover:bg-opacity-25 transition-all duration-200" id="coma" onclick="agregar_value(',')">,</button>
+      <button class="py-5 bg-purple-400 bg-opacity-10 text-white font-bold text-xl focus:outline-none hover:bg-opacity-25 transition-all duration-200" id="igual" onclick="evaluar()">=</button>
+    </div>
+  </div>
+</div>
+<script src="./script.js"></script>
+</body>
+</html>
